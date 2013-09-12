@@ -1,4 +1,4 @@
-Week 2 code examples
+### Week 2 code examples
 
 **sep10v2**
 
