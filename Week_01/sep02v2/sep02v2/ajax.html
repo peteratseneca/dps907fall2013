@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax example</title>
+</head>
+<body>
+    <h3>My favourite colours</h3>
+    <form>
+        <input type=button onclick=getColours(); value='Get from web service'></form>
+    <ul id=colours></ul>
+
+    <script>
+        function getColours() {
+            // get a reference to the list
+            var list = document.querySelector('#colours');
+
+            // fetch the colours from the web service...
+
+            // create an xhr object
+            var xhr = new XMLHttpRequest();
+
+            // define its callback function
+            xhr.onreadystatechange = function () {
+
+                // continue if all data was received, successfully
+                if (xhr.readyState === 4 & xhr.status === 200) {
+
+                    // parse the result to an object 
+                    // (which we know is an array of strings)
+                    var colours = JSON.parse(xhr.responseText);
+
+                    // go through the array, and build list items
+                    for (var i = 0; i < colours.length; i++) {
+
+                        var item = document.createElement('li');
+                        item.textContent = colours[i];
+                        item.style.color = colours[i];
+                        list.appendChild(item);
+                    }
+                }
+            };
+
+            // configure and execute the xhr object
+            xhr.open('get', 'api/values', true);
+            xhr.setRequestHeader('Accept', 'application/json');
+            xhr.send();
+        }
+    </script>
+
+</body>
+</html>
