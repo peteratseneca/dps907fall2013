@@ -1,6 +1,6 @@
 ### DPS907 and WSA500 for the Fall 2013 semester
 
-Code examples
+**Code examples**
 
 Organized by week. Each "week" page has a read me file that describes the example.
 
