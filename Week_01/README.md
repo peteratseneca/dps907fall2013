@@ -1,12 +1,12 @@
 ### Week 1 code examples
 
-_sep02v1_
+**sep02v1**
 
 Results from doing File > New > Project. 
 Unmodified, no changes. 
 Study its structure - this is a typical ASP.NET MVC project.
 
-_sep02v2_
+**sep02v2**
 
 Creates an in-memory data store, a simple generic list of colours.
 This app features:
@@ -15,7 +15,7 @@ This app features:
 - the store is a simple generic list of strings (of colours)
 - as a bonus feature, ajax.html will call the web service, and use the results to modify the web page
 
-_sep02v3_
+**sep02v3**
 
 Adds an app domain data model (colours), an initializer, and a data service class.
 This app's features:
