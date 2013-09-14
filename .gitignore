@@ -1,3 +1,7 @@
+# Keep top-level 'packages' folder, 
+# so you can copy-paste it to each code example
+!/packages/
+
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Bb]in/
 [Oo]bj/
