@@ -1,0 +1,50 @@
+﻿<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <h2>Handling images, version 1</h2>
+            <p>
+                September 24 and 27
+            </p>
+            <p>
+                Simple image delivery, using content negotiation
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <h3>Features:</h3>
+        <ol class="round">
+            <li class="one">
+                <h5>Model object with byte array property</h5>
+                Holds the photo bytes
+            </li>
+
+            <li class="two">
+                <h5>New 'ImageFormatter' class, in the Formatters folder</h5>
+                Accepts a model object, and returns an 'image' internet media type<br />
+                Request includes an 'Accept: image/*' header
+            </li>
+
+            <li class="three">
+                <h5>View model support</h5>
+                A view model class includes a byte array property for the image bytes<br />
+                Notice that the property is ignored by the JSON and XML serializers<br />
+                In Solution Explorer, must add a reference to this .NET Framework assembly:<br />
+                System.Runtime.Serialization
+            </li>
+
+            <li class="four">
+                <h5>Repository support</h5>
+                No obvious design changes from past examples - it just works<br />
+                Adding a new object is a two-step process:<br />
+                1. POST a new object, except for the photo bytes<br />
+                2. PUT to the object, with only the photo bytes
+            </li>
+
+            <li class="five">
+                <h5>Controller support</h5>
+                Small change to the design approach for the 'get-one' method.<br />
+                If the request is for an image, we configure the Content-Type header.
+            </li>
+        </ol>
+    </section>
+</div>
