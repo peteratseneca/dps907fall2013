@@ -1,12 +1,12 @@
 ﻿<div id="body">
     <section class="featured">
         <div class="content-wrapper">
-            <h2>Handling images, version 1</h2>
+            <h2>Security introduction, done simply</h2>
             <p>
-                September 24 and 27
+                October 1
             </p>
             <p>
-                Simple image delivery, using content negotiation
+                Message handler concept, using HTTP Basic Authentication
             </p>
         </div>
     </section>
@@ -14,37 +14,25 @@
         <h3>Features:</h3>
         <ol class="round">
             <li class="one">
-                <h5>Model object with byte array property</h5>
-                Holds the photo bytes
+                <h5>Message handler</h5>
+                Performs the authentication task <br />
+                Located early in the request-processing pipeline<br />
+                Initialized in the Global.asax.cs source code file
             </li>
 
             <li class="two">
-                <h5>New 'ImageFormatter' class, in the Formatters folder</h5>
-                Accepts a model object, and returns an 'image' internet media type<br />
-                Request includes an 'Accept: image/*' header
+                <h5>Authorize attribute</h5>
+                Used in controllers (controller, or per-method, or globally)<br />
+                Per-user and/or per-role authorization
             </li>
 
             <li class="three">
-                <h5>View model support</h5>
-                A view model class includes a byte array property for the image bytes<br />
-                Notice that the property is ignored by the JSON and XML serializers<br />
-                In Solution Explorer, must add a reference to this .NET Framework assembly:<br />
-                System.Runtime.Serialization
+                <h5>Credential store support</h5>
+                Somewhat artificial - you will NOT do this in a real app!<br />
+                However, it supports the needs of THIS app<br />
+                Includes view model, repository, and controller 
             </li>
 
-            <li class="four">
-                <h5>Repository support</h5>
-                No obvious design changes from past examples - it just works<br />
-                Adding a new object is a two-step process:<br />
-                1. POST a new object, except for the photo bytes<br />
-                2. PUT to the object, with only the photo bytes
-            </li>
-
-            <li class="five">
-                <h5>Controller support</h5>
-                Small change to the design approach for the 'get-one' method.<br />
-                If the request is for an image, we configure the Content-Type header.
-            </li>
         </ol>
     </section>
 </div>

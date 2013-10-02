@@ -68,6 +68,9 @@ namespace oct01securitybasic.Handlers
                     IPrincipal principal = 
                         new GenericPrincipal(identity, new[] { credential.Role });
                     Thread.CurrentPrincipal = principal;
+
+                    // Make sure that the HTTP request processing context has the new principal
+                    if (HttpContext.Current != null) HttpContext.Current.User = principal;
                 }
 
             }
