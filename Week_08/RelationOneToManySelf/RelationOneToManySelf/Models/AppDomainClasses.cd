@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="One-to-many&#xD;&#xA;Reference to self&#xD;&#xA;&#xD;&#xA;Notice the types of the nav properties&#xD;&#xA;&#xD;&#xA;Notice also the nullable int property">
+    <Position X="6.177" Y="0.5" Height="1.26" Width="2.304" />
+  </Comment>
+  <Class Name="RelationOneToManySelf.Models.Employee">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <AssociationLine Name="ReportsToEmployee" Type="RelationOneToManySelf.Models.Employee" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="1.875" />
+        <Point X="4.49" Y="1.875" />
+        <Point X="4.49" Y="1.438" />
+        <Point X="3.75" Y="1.438" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="EmployeesSupervised" Type="RelationOneToManySelf.Models.Employee" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.562" Y="2.18" />
+        <Point X="1.562" Y="3.295" />
+        <Point X="2.938" Y="3.295" />
+        <Point X="2.938" Y="2.18" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.838" Y="1.268" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAAEAAAAAAAAAEAAAAQAAAAAAAAg=</HashCode>
+      <FileName>Models\AppDomainClasses.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReportsToEmployee" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EmployeesSupervised" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
